@@ -73,6 +73,7 @@ if (largeClick) {
 			modal = e.target.parentElement.parentElement.getAttribute('data-modal');
 			console.log(e.target)
 			$(".modal[data-modal="+modal+"]").css('opacity', '1');
+			$(".modal[data-modal="+modal+"]").css('pointerEvents', 'auto');
 		});
 	}
 }
@@ -104,7 +105,7 @@ if (categorias) {
 			}
 
 			$('.filtro').css('display', 'none');
-			
+
 		});
 	}
 }
@@ -131,7 +132,7 @@ if (secLogo) {
 		}
 
 		$("a[href='#section_logo']").css('background', '#fff');
-		
+
  	}
 
 	if (window.scrollY >= section2 && window.scrollY < section3) {
@@ -144,7 +145,7 @@ if (secLogo) {
 		$("a[href='#section_info']").css('background', '#fff');
 		$("header > div > a > figure > img").attr('src', 'assets/img/logo.png');
 
-	
+
 	}
 
 	if (window.scrollY >= section3 && window.scrollY < section4) {
@@ -185,8 +186,8 @@ if (secLogo) {
 
 
 
-	window.onscroll = function (e) {  
-	 
+	window.onscroll = function (e) {
+
 	  	let section1 = document.querySelector('.section-logo').offsetTop;
 	  	let section2 = document.querySelector('.seccion-info').offsetTop;
 	  	let section3 = document.querySelector('.seccion-portafolio').offsetTop;
@@ -203,7 +204,7 @@ if (secLogo) {
 
 			$("a[href='#section_logo']").css('background', '#fff');
 			$("header > div > a > figure > img").attr('src', 'assets/img/logo-blanco.png');
-			
+
 	 	}
 
 		if (window.scrollY >= section2 && window.scrollY < section3) {
@@ -215,9 +216,9 @@ if (secLogo) {
 
 			$("a[href='#section_info']").css('background', '#fff');
 			$("header > div > a > figure > img").attr('src', 'assets/img/logo-blanco.png');
-			
 
-		
+
+
 		}
 
 		if (window.scrollY >= section3 && window.scrollY < section4) {

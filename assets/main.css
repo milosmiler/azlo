@@ -287,19 +287,12 @@ nav.active span.close {
 	margin-bottom: 30px;
 }
 
-.modal-contenido{
-  background-color: white;
-  max-width:1200px;
-  margin: auto;
-  position: relative;
-  overflow: scroll;
-  height: 200vh;
-  margin-bottom: 100px;
-  z-index: 5;
-}
+
 .modal{
+
   background-color: rgba(0,0,0,.8);
-  position:absolute;
+  position:fixed;
+  width: 100vw;
   top:0;
   right:0;
   bottom:0;
@@ -307,8 +300,22 @@ nav.active span.close {
   opacity:0;
   pointer-events:none;
   transition: all 1s;
-  z-index: 3;
+  z-index: 9999;
+  padding: 100px 0;
 }
+
+.modal-contenido{
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  overflow: scroll;
+  height: 100vh;
+  margin-bottom: 100px;
+   z-index: -1;
+
+}
+
 #miModal:target{
   opacity:1;
   pointer-events:auto;
@@ -323,9 +330,11 @@ nav.active span.close {
 .modal-contenido .content{
 	padding-bottom: 100px;
 	overflow: scroll;
+	height: auto;
 }
 
 .modal-contenido .content figure.feature{
+
 	max-width: 470px;
 	margin: auto;
 	margin-bottom: 80px;
