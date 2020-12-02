@@ -295,10 +295,11 @@ nav.active span.close {
   overflow: scroll;
   height: 200vh;
   margin-bottom: 100px;
+  z-index: 5;
 }
 .modal{
   background-color: rgba(0,0,0,.8);
-  position:fixed;
+  position:absolute;
   top:0;
   right:0;
   bottom:0;
@@ -306,6 +307,7 @@ nav.active span.close {
   opacity:0;
   pointer-events:none;
   transition: all 1s;
+  z-index: 3;
 }
 #miModal:target{
   opacity:1;
