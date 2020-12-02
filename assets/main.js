@@ -72,6 +72,7 @@ if (largeClick) {
 		largeClick[i].addEventListener('click', function(e) {
 			modal = e.target.parentElement.parentElement.getAttribute('data-modal');
 			console.log(e.target)
+
 			$(".modal[data-modal="+modal+"]").css('opacity', '1');
 			$(".modal[data-modal="+modal+"]").css('pointerEvents', 'auto');
 		});
