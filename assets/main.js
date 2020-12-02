@@ -17,13 +17,33 @@ if (menu) {
 	})
 }
 
-let close = document.querySelector('.close');
+let close = document.querySelector('nav .close');
 if (close) {
 	close.addEventListener('click', function(e) {
 		e.preventDefault();
 		document.querySelector('nav').classList.remove('active');
+		document.querySelector('.contacto').style.display = "none";
 	})
 }
+
+
+let close_contacto = document.querySelector('.contacto .close');
+if (close_contacto) {
+	close_contacto.addEventListener('click', function(e) {
+		e.preventDefault();
+		document.querySelector('.contacto').style.display = "none";
+	})
+}
+
+
+let contacto = document.querySelector('.seccion-contacto .container button');
+if (contacto) {
+	contacto.addEventListener('click', function(e) {
+		e.preventDefault();
+		document.querySelector('.contacto').style.display = "block";
+	})
+}
+
 
 
 //hover galeria

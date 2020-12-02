@@ -170,6 +170,87 @@ nav.active span.close {
     cursor: pointer;
 }
 
+.contacto {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    transition: all .3s ease;
+    display: none;
+}
+
+.contacto span.close {
+    position: absolute;
+    right: 170px;
+    top: 80px;
+    display: block;
+    cursor: pointer;
+}
+
+.contacto h3 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: Graphik-Medium;
+    display: block;
+    margin-bottom: 70px;
+    margin-top: 70px;
+}
+
+.contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-family: Graphik-Regular;
+}
+
+.contacto form button {
+    width: 151px;
+    padding: 16px 40px;
+    border-radius: 110px;
+    background-color: black;
+    font-family: Graphik-Regular;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    color: #fff;
+    border: 0;
+    line-height: inherit;
+    cursor: pointer;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 10px 20px 0px;
+    transition-property: transform, box-shadow;
+    transition-duration: 200ms, 200ms;
+    transition-timing-function: ease-in-out, ease-in-out;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.contacto form div label {
+    display: block;
+}
+
+.contacto form div.container-colum div input {
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.contacto form div.container-text textarea {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.contacto form div.container-colum {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
 .seccion-info{
 	height: auto!important;
 }
