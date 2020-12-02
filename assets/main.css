@@ -682,12 +682,6 @@ div.posicion_first {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
-
-    position: relative;
-    text-align: center;
-    min-height: 300px;
-    max-height: 700px;
-    height: 80%;
 }
 
 ::scrollbar {
