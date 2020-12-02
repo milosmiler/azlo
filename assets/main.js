@@ -46,10 +46,35 @@ if (large) {
 
 
 //EFECTO DE ALICK AL MENU
-// itemMenu = document.querySelectorAll('header nav a');
-// if (itemMenu) {
-// 	itemMenu.addEventListener('');
-// }
+itemMenu = document.querySelectorAll('header nav a');
+if (itemMenu) {
+	for (var i = 0; i <= itemMenu.length - 1; i++) {
+		itemMenu[i].addEventListener('click', function(e) {
+			$('nav').removeClass();
+		});
+	}
+}
+
+
+
+//Efecto de Filtrado
+categorias = document.querySelectorAll('.categorias a');
+if (categorias) {
+	for (var i = 0; i <= categorias.length - 1; i++) {
+		categorias[i].addEventListener('click', function(e) {
+			e.preventDefault();
+			let cat = e.target.getAttribute('data-cat');
+			if (cat != 'todas') {
+				$('.filtro').css('display', 'block');
+				$('.large[data-cat="'+cat+'"] .filtro, .short[data-cat="'+cat+'"] .filtro').css('display', 'none');
+				return false;
+			}
+
+			$('.filtro').css('display', 'none');
+			
+		});
+	}
+}
 
 
 
@@ -171,11 +196,6 @@ if (secLogo) {
 
 			$("a[href='#seccion_portafolio']").css('background', '#fff');
 			$("header > div > a > figure > img").attr('src', 'assets/img/logo.png');
-
-			let scroltop = window.scrollY;
-
-
-			$('#seccion_portafolio > div > div').css('transform', 'translate3d(0px, '+ -scroltop +'px, 0px)');
 
 		}
 

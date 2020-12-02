@@ -21,11 +21,13 @@ html {
 
 header {
 	position: fixed;
+	width: 100%;
     padding-top: 50px;
     left: 0px;
     top: 0px;
     right: 0px;
     z-index: 4;
+	padding: 0 60px;
 }
 
 header div.container {
@@ -46,7 +48,9 @@ section {
 	height: 100vh;
 	position: relative;
 	padding-top: 110px;
-	overflow: hidden;
+}
+
+body{
 }
 
 /*section:not('.portafolio-main') {
@@ -111,9 +115,8 @@ section {
 }
 
 .container {
+	max-width: 1700px;
 	margin: auto;
-	/*max-width: 1700px;*/
-    max-width: 90%;
 }
 
 
@@ -139,6 +142,7 @@ nav.active {
 }
 
 nav a {
+    font-family: Graphik-Regular;
     display: block;
     text-align: center;
     margin-top: 15px;
@@ -149,7 +153,8 @@ nav a {
     text-decoration: none;
     transition: all 400ms ease;
     letter-spacing: 1rem;
-    line-height: 100px;
+    line-height: 50px;
+    text-transform: uppercase;
 }
 
 
@@ -157,12 +162,16 @@ nav a:hover {
     color: rgba(0,0,0,0.5);
 }
 
-nav span {
+nav.active span.close {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 170px;
+    top: 80px;
     display: block;
     cursor: pointer;
+}
+
+.seccion-info{
+	height: auto!important;
 }
 
 
@@ -199,6 +208,9 @@ section.section-logo h1 {
 	color: #fff;
 	letter-spacing: 4vw;
 }
+#main{
+	width: 100%;
+}
 
 #main.negro {
     background: #000;
@@ -234,14 +246,17 @@ section.seccion-info div.container p {
     text-align: left;
     padding: inherit;
     color: #fff;
+    padding: 60px;
 }
 
 section.seccion-portafolio {
 	height: auto;
 	padding-bottom: 30vh;
+	padding-top: 100px;
+	position: relative;
 }
 
-section.seccion-portafolio div.container h2 {
+section.seccion-portafolio .container h2 {
 	width: 100%;
 	margin-bottom: 50px;
     padding-bottom: 0px;
@@ -251,45 +266,34 @@ section.seccion-portafolio div.container h2 {
     font-weight: 700;
     text-align: center;
     letter-spacing: -1vw;
+	position: sticky;
+  	top: 100px;
+  	width: 100%;
 }
 
-section.seccion-portafolio div.container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
 
-section.seccion-portafolio div.container div {
+section.seccion-portafolio .container .item-content {
     width: 100%;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    perspective: 12000px;
-    -webkit-perspective: 12000px;
+	justify-content: center;
+	position: relative;
+    padding-left: 250px;
 }
 
-section.seccion-portafolio div.container div figure {
+section.seccion-portafolio .container .item-content figure {
 	width: 50%;
-	height: auto;
-	display: flex;
-    justify-content: flex-end;
 }
-
-section.seccion-portafolio div.container div figure img {
-	max-width: 32vw;
+section.seccion-portafolio .container .item-content figure img{
+	width: 80%;
 }
-
-
-
-section.seccion-portafolio div.container div div {
+section.seccion-portafolio .container .item-content div {
 	width: 50%;
 	height: auto;
 	display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    position: relative;
-    left: 16vh;
     padding-top: 119px;
+
 }
 
 
@@ -343,6 +347,8 @@ section.seccion-research div.container h2 {
     font-weight: 700;
     text-align: center;
     letter-spacing: -1vw;
+	position: sticky;
+  	top: 100px;
 }
 
 
@@ -353,6 +359,7 @@ section.seccion-research div.container p {
     line-height: 1.7;
     text-align: center;
     padding: 80px 147px;
+	position: relative;
 
 }
 
@@ -364,6 +371,7 @@ section.seccion-contacto {
 	height: auto;
 	padding-bottom: 15%;
     padding-top: 150px;
+	overflow: hidden;
 }
 
 section.seccion-contacto div.container {
@@ -512,13 +520,37 @@ div.posicion_first {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+
+    position: relative;
+    text-align: center;
+    min-height: 300px;
+    max-height: 700px;
+    height: 80%;
+}
+
+::scrollbar {
+  display: none;
 }
 
 div.posicion_first .large {
     width: 30%;
     max-height: 400px;
     overflow: hidden;
+    position: relative;
 }
+
+
+div.posicion_first .short .filtro,
+div.posicion_first .large .filtro {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.7;
+    background: #fff;
+    display: none;
+}
+
 
 div.posicion_first .large figure {
     cursor: pointer;
@@ -532,6 +564,7 @@ div.posicion_first .short {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    position: relative;
 }
 
 div.posicion_first .short figure {
@@ -589,29 +622,6 @@ div.posicion_first .short figure {
 
 .grid-item:hover .proyecto-seleccionado {
     display: flex;
-}
-
-.modal-contenido{
-  background-color:white;
-  width:900px;
-  padding: 10px 20px;
-  margin: 20% auto;
-  position: relative;
-}
-.modal{
-  background-color: rgba(0,0,0,.8);
-  position:fixed;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
-  opacity:0;
-  pointer-events:none;
-  transition: all 1s;
-}
-#miModal:target{
-  opacity:1;
-  pointer-events:auto;
 }
 
 

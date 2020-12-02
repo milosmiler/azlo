@@ -208,7 +208,8 @@ a:focus {
 	text-fill-color: transparent;
 	/*color: transparent;*/
 	pointer-events: none;
-	margin-top: 300px;
+	margin-top: -30vh;
+    margin-bottom: 0;
 }
 
 .content__img {
@@ -284,7 +285,7 @@ a:focus {
 	    transition-property: transform, box-shadow;
 	    transition-duration: 200ms, 200ms;
 	    transition-timing-function: ease-in-out, ease-in-out;
-	    margin-top: 72px;
+	    margin-top: 9vh;
 	}
 	.frame__title {
 		margin: 0;
@@ -297,7 +298,6 @@ a:focus {
 		display: flex;
 	    justify-content: space-between;
 	    width: 55%;
-	    margin-bottom: 70px;
 	}
 	.frame__links a {
 		cursor: auto;
