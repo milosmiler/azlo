@@ -65,6 +65,19 @@ if (large) {
 }
 
 
+//CLICK A CADA PROYECTO EN PORTAFOLIO
+let largeClick = document.querySelectorAll('.large');
+if (largeClick) {
+	for (var i = 0; i <= largeClick.length - 1; i++) {
+		largeClick[i].addEventListener('click', function(e) {
+			modal = e.target.parentElement.parentElement.getAttribute('data-modal');
+			console.log(e.target)
+			$(".modal[data-modal="+modal+"]").css('opacity', '1');
+		});
+	}
+}
+
+
 //EFECTO DE ALICK AL MENU
 itemMenu = document.querySelectorAll('header nav a');
 if (itemMenu) {
