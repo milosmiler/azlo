@@ -201,6 +201,60 @@ nav.active span.close {
     width: 75%;
 }
 
+.modal-contenido{
+  background-color: white;
+  max-width:1200px;
+  margin: auto;
+  position: relative;
+  overflow: scroll;
+  height: 200vh;
+  margin-bottom: 100px;
+}
+.modal{
+  background-color: rgba(0,0,0,.8);
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity:0;
+  pointer-events:none;
+  transition: all 1s;
+}
+#miModal:target{
+  opacity:1;
+  pointer-events:auto;
+}
+.modal-contenido a.btn{
+	width: 310px;
+	margin: auto;
+	margin-bottom: 50px;
+	display: block;
+	text-align: center;
+}
+.modal-contenido .content{
+	padding-bottom: 100px;
+	overflow: scroll;
+}
+
+.modal-contenido .content figure.feature{
+	max-width: 470px;
+	margin: auto;
+	margin-bottom: 80px;
+}
+.item-features{
+	width: 100%;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.item-features figure{
+	width: 45%;
+	margin-bottom: 50px;
+}
+.item-features figure img{
+	width: 100%;
+}
+
 section.seccion-contacto div.container h2,
 section.section-logo h1 {
 	font-size: 25.1875rem;
@@ -307,6 +361,26 @@ section.seccion-portafolio div.container div div p {
 }
 
 section.seccion-portafolio div.container div div button {
+	width: 151px;
+	padding: 16px 40px;
+	border-radius: 110px;
+    background-color: black;
+    font-family: Graphik-Regular;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    color: #fff;
+    border: 0;
+    line-height: inherit;
+    cursor: pointer;
+    outline: none;
+    margin-top: 60px;
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 10px 20px 0px;
+    transition-property: transform, box-shadow;
+    transition-duration: 200ms, 200ms;
+    transition-timing-function: ease-in-out, ease-in-out;
+}
+
+button, a.btn {
 	width: 151px;
 	padding: 16px 40px;
 	border-radius: 110px;
