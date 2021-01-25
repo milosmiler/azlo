@@ -38,6 +38,14 @@ body {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Graphik-Regular';
+    src: url('../fonts/Graphik-Regular.woff2') format('woff2'),
+         url('../fonts/Graphik-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .demo-2 {
 	--color-text: #ffffff;
     --color-bg: #151413;
@@ -269,7 +277,7 @@ a:focus {
 	    align-items: center;
 	}
 	.frame__title-wrap a.button-home {
-    	width: 151px;
+    	width: 230px;
 	    padding: 16px 40px;
 	    border-radius: 110px;
 	    background-color: black;
@@ -286,6 +294,7 @@ a:focus {
 	    transition-duration: 200ms, 200ms;
 	    transition-timing-function: ease-in-out, ease-in-out;
 	    margin-top: 9vh;
+	    text-transform: uppercase;
 	}
 	.frame__title {
 		margin: 0;
